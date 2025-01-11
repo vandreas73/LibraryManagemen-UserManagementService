@@ -6,7 +6,7 @@ using UserManagementService;
 
 Console.WriteLine("Hello, World!");
 
-using var channel = GrpcChannel.ForAddress("http://localhost:32770");
+using var channel = GrpcChannel.ForAddress("https://usermgmt-container-app.happyrock-19bd815d.northeurope.azurecontainerapps.io:443");
 var client = new UserManager.UserManagerClient(channel);
 
 var getReply = await client.GetAsync(new UserIdRequest { Id = 2});
